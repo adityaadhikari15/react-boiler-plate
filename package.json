@@ -1,0 +1,42 @@
+{
+  "name": "react-live-project",
+  "version": "1.0.0",
+  "description": "This is a react live production app",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "parcel index.html",
+    "build": "parcel build index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adityaadhikari15/react-live-project.git"
+  },
+  "keywords": [
+    "React"
+  ],
+  "author": "Aditya Adhikari",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/adityaadhikari15/react-live-project/issues"
+  },
+  "homepage": "https://github.com/adityaadhikari15/react-live-project#readme",
+  "dependencies": {
+    "axios": "^1.5.1",
+    "bootstrap": "^5.2.3",
+    "primereact": "^10.0.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.16.0"
+  },
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.9.3",
+    "buffer": "^6.0.3",
+    "parcel": "^2.9.3",
+    "process": "^0.11.10",
+    "sass-loader": "^13.2.2"
+  },
+  "broswerslist": [
+    "last 2 versions"
+  ]
+}
