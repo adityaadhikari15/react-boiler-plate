@@ -7,9 +7,8 @@ import "./login.scss";
 const Login = () => {
   const [username, setUserName] = useState("");
   const [password, setUserPassword] = useState("");
-  // ToastrService.error("Guest name is required", "Error");
 
-  login = async () => {
+  const login = async () => {
     await UserSignIn({ username, password })
       .then((res) => {
         console.log(res);
