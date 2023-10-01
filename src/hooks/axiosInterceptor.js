@@ -1,7 +1,7 @@
 import axios from "axios";
 import useLocalStorage from "./localStorage";
 import { environment } from "../environment/environment";
-import { ToastrService } from "../services";
+import { ToastrService } from "../services/prime-toastr.service";
 import { useNavigate } from "react-router-dom";
 
 const useAxiosInterceptor = () => {

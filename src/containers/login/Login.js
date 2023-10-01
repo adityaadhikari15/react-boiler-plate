@@ -3,18 +3,25 @@ import { InputText } from "primereact/inputtext";
 import { UserSignIn } from "../../services";
 import "./login.scss";
 import { useNavigate } from "react-router-dom";
+import { Button } from "primereact/button";
 
 const Login = () => {
   const [username, setUserName] = useState("kminchelle");
   const [password, setUserPassword] = useState("0lelplR");
+  const [loading, setLoading] = useState(false);
+
   const navigate = useNavigate();
 
   const login = async () => {
+    setLoading(true);
     await UserSignIn({ username, password })
       .then((res) => {
         navigate("/admin");
+        setLoading(false);
       })
-      .catch(() => {});
+      .catch(() => {
+        setLoading(false);
+      });
   };
 
   return (
@@ -47,9 +54,12 @@ const Login = () => {
               </div>
             </div>
             <div>
-              <button className="btn btn-sm btn-primary w-100" onClick={login}>
-                Login
-              </button>
+              <Button
+                label="Login"
+                className="btn btn-sm btn-primary w-100"
+                loading={loading}
+                onClick={login}
+              />
             </div>
           </div>
         </div>

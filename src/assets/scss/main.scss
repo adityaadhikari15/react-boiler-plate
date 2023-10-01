@@ -124,6 +124,10 @@ body {
   padding: 24px;
 }
 
+.p-8px {
+  padding: 8px !important;
+}
+
 .center {
   display: flex;
   justify-content: center;
@@ -180,4 +184,8 @@ body {
 
 .text-underline {
   text-decoration: underline;
+}
+
+.pi {
+  font-size: 12px;
 }

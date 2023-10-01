@@ -1,6 +1,7 @@
 import { Navigate, Route, Routes } from "react-router";
 import UsersList from "./users/users-list/UsersList";
 import ProductsList from "./products/products-list/products-list";
+import About from "../about/about";
 const AdminRoutes = () => {
   return (
     <Routes>

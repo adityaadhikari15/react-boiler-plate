@@ -1,41 +1,55 @@
-# Steps to initialize a react project
+# React boiler plate for large scalable projects.
 
-## Initial setup
+If you have more basic conpcepts which can help our fellow react developers or a great idea for this boiler plate please feel free to create a pull request. I am open for every contribution. I will learn from you and I hope this boiler plate will also help you in developing large scalable projects.
 
-**-** Create index.html and app.js
+### What is included in this boiler plate?
 
-**-** `npm init` (Creates package.json, it will ask about your application configuration.)
+✅ React basic and nested routing using `react-router-dom`
 
-**-** `npm install -D parcel` (Parcel is used to build optimized application for development purpose. -D will add parcel in dev dependencies as we do not want to push parcel in production. As user will make build on his/her local machine)
+✅ `Authentication guard` and `User based guard` as router guards
 
-**-** `npm install react`
+✅ `Layout structure` for different users
 
-**-** `npm install react-dom`
+✅ `Custom Hooks` for local storage
 
-**-** `npm install primereact` UI library for react. [Read more about primereact](https://primereact.org/)
+✅ Live API call using `Axios`
 
-**-** Create .gitignore
+✅ `Axios Interceptor` as `custom hook` for header and base URL **(Avoid using passsing of headers in every service file)**
 
-## How to run application
+✅ `Prime React` and `Bootstrap` as our UI library
 
-### Without script
+✅ `Login page`, `Users list` and `Products list` with live API call.
 
-**-** Run your application `npm parcel index.html`
-
-**-** Build your application `npm parcel build index.html`
-
-### With script
-
-```
-// Add this on package.json
-
-"scripts": {
-    "start": "parcel index.html",
-    "build": "parcel build index.html",
-    "test": "jest"
-  }
-```
+### How to run?
 
 **-** Run your application using `npm start`
 
 **-** Build you application using `npm build`
+
+### Dependencies Used in this project
+
+```
+"axios": "^1.5.1", // API calls
+"bootstrap": "^5.2.3",
+"primereact": "^10.0.2",  // UI Library with components
+"react": "^18.2.0",
+"react-dom": "^18.2.0",
+"react-router-dom": "^6.16.0",
+"parcel": "^2.9.3",
+```
+
+### Resources
+
+➡️ [React](https://react.dev/)
+
+➡️ [Parcel](https://parceljs.org/)
+
+➡️ [Prime React](https://primereact.org/)
+
+➡️ [Axios](https://axios-http.com/docs/intro)
+
+➡️ [Bootstrap](https://getbootstrap.com/docs/5.3/getting-started/introduction/)
+
+➡️ [React Router](https://reactrouter.com/en/main)
+
+➡️ [Dummy API Calls with authentication and live data](https://dummyjson.com/docs)
