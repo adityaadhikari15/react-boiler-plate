@@ -2,7 +2,6 @@ import { NavLink } from "react-router-dom";
 import AdminRoutes from "./AdminRoutes.js";
 import "./admin-layout.scss";
 const AdminLayout = () => {
-  console.log("Admin layout");
   return (
     <div className="admin-layout">
       <div className="side-bar">
@@ -27,25 +26,26 @@ const AdminLayout = () => {
                 className={({ isActive }) =>
                   isActive ? "link-active" : "link"
                 }
-                to="/admin/properties"
+                to="/admin/products"
               >
-                <li>Properties</li>
+                <li>Products</li>
               </NavLink>
 
               <NavLink
                 className={({ isActive }) =>
                   isActive ? "link-active" : "link"
                 }
-                to="/"
+                to="/admin/users"
               >
-                <li>Login</li>
+                <li>Users</li>
               </NavLink>
             </ul>
           </nav>
         </div>
       </div>
-      <h1>Layout</h1>
-      <AdminRoutes />
+      <div className="main-content">
+        <AdminRoutes />
+      </div>
     </div>
   );
 };

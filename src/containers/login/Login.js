@@ -1,17 +1,18 @@
 import { useState } from "react";
 import { InputText } from "primereact/inputtext";
-import { Password } from "primereact/password";
-import { SetToken, ToastrService, UserSignIn } from "../../services";
+import { UserSignIn } from "../../services";
 import "./login.scss";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
-  const [username, setUserName] = useState("");
-  const [password, setUserPassword] = useState("");
+  const [username, setUserName] = useState("kminchelle");
+  const [password, setUserPassword] = useState("0lelplR");
+  const navigate = useNavigate();
 
   const login = async () => {
     await UserSignIn({ username, password })
       .then((res) => {
-        console.log(res);
+        navigate("/admin");
       })
       .catch(() => {});
   };

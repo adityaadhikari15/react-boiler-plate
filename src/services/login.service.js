@@ -1,19 +1,20 @@
-import axios from "axios";
 import { ToastrService } from "./prime-toastr.service";
-import { environment } from "../environment/environment";
 import useLocalStorage from "../hooks/localStorage";
+import useAxiosInterceptor from "../hooks/axiosInterceptor";
 
-const apiUrl = environment.apiUrl + "auth";
-const { setToken, setUser, getToken } = useLocalStorage();
+const { axiosApiInstance } = useAxiosInterceptor();
+
+const apiUrl = "auth";
+
+const { setToken, setUser } = useLocalStorage();
 
 const UserSignIn = async (data) => {
   try {
-    const response = await axios.post(`${apiUrl}/signin`, data);
+    const response = await axiosApiInstance.post(`${apiUrl}/login`, data);
     const _response = await response.data;
-    if (_response.user) {
+    if (_response.token) {
       setToken(_response.token);
-      setUser(_response.user);
-      console.log(getToken());
+      setUser({ ..._response });
       return _response;
     } else {
       ToastrService.error(_response.message, "Error");

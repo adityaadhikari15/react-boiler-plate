@@ -3,15 +3,7 @@ import ReactDOM from "react-dom/client";
 import { InputText } from "primereact/inputtext";
 import "primereact/resources/themes/lara-light-indigo/theme.css";
 import "primereact/resources/primereact.min.css";
-import {
-  RouterProvider,
-  Routes,
-  createBrowserRouter,
-  Route,
-  BrowserRouter,
-  Redirect,
-  Navigate,
-} from "react-router-dom";
+import { Routes, Route, BrowserRouter, Navigate } from "react-router-dom";
 import Login from "./containers/login/Login.js";
 import "bootstrap/dist/css/bootstrap.css";
 import InvalidRoute from "./containers/invalid-route/InvalidRoute.js";
@@ -25,6 +17,7 @@ const App = () => {
         <Route path="login" element={<Login />} />
         <Route element={<AuthenticationGuard />}>
           <Route path="admin" element={<RoleRouterGuard role={"ADMIN"} />}>
+            <Route path="" element={<AdminLayout />}></Route>
             <Route path="*" element={<AdminLayout />}></Route>
           </Route>
           <Route path="*" element={<InvalidRoute />} />
