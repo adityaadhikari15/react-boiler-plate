@@ -1,6 +1,6 @@
 # React boiler plate for large scalable projects.
 
-If you have more basic conpcepts which can help our fellow react developers or a great idea for this boiler plate please feel free to create a pull request. I am open for every contribution. I will learn from you and I hope this boiler plate will also help you in developing large scalable projects.
+If you have more basic concepts which can help our fellow react developers or a great idea for this boiler plate please feel free to create a pull request. I am open for every contribution. I will learn from you and I hope this boiler plate will also help you in developing large scalable projects.
 
 ### What is included in this boiler plate?
 
