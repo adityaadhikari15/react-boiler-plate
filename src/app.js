@@ -5,9 +5,16 @@ import "primereact/resources/primereact.min.css";
 import "primeicons/primeicons.css";
 import "bootstrap/dist/css/bootstrap.css";
 import AppRouting from "./app-routing";
-
+import useInternetConnectionStatus from "./hooks/internetConnectionStatus";
 const App = () => {
-  return <AppRouting />;
+  const onlineStatus = useInternetConnectionStatus();
+  return onlineStatus ? (
+    <AppRouting />
+  ) : (
+    <div className="center h-100">
+      <h3>Connection lost</h3>
+    </div>
+  );
 };
 
 const reactDOM = ReactDOM.createRoot(document.getElementById("root"));

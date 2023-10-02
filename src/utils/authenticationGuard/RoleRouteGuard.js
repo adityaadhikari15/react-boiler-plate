@@ -3,7 +3,6 @@ import { Outlet } from "react-router";
 
 const RoleRouterGuard = ({ role }) => {
   const checkRole = () => {
-    console.log(role);
     switch (role) {
       case "ADMIN":
         return <Outlet />;

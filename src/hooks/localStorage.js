@@ -45,13 +45,6 @@ const useLocalStorage = () => {
     localStorage.clear();
   };
 
-  // const localStorage = () => {
-  //   if (data) {
-  //     localStorage.setItem(BB_TOKEN_NAME, JSON.stringify(data));
-  //     return true;
-  //   }
-  // };
-
   return {
     setToken,
     getToken,

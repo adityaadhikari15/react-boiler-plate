@@ -1,4 +1,4 @@
-import { Routes, Route, BrowserRouter } from "react-router-dom";
+import { Routes, Route, BrowserRouter, Navigate } from "react-router-dom";
 import InvalidRoute from "./containers/invalid-route/InvalidRoute.js";
 import AuthenticationGuard from "./utils/AuthenticationGuard/AuthenticationGuard.js";
 import RoleRouterGuard from "./utils/authenticationGuard/RoleRouteGuard.js";
@@ -9,6 +9,7 @@ const AppRouting = () => {
   return (
     <BrowserRouter basename="/">
       <Routes>
+        <Route path="/" element={<Navigate to="login" />}></Route>
         <Route path="login" element={<Login />} />
         <Route element={<AuthenticationGuard />}>
           <Route path="admin" element={<RoleRouterGuard role={"ADMIN"} />}>
