@@ -12,6 +12,8 @@ If you have more basic concepts which can help our fellow react developers or a 
 
 ✅ `Custom Hooks` for local storage
 
+✅ `Lazy Loading` for dynamic importing of components to reduce our main bundle size.
+
 ✅ Live API call using `Axios`
 
 ✅ `Axios Interceptor` as `custom hook` for header and base URL **(Avoid using passing of headers in every service file)**
