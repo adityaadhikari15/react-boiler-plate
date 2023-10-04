@@ -8,7 +8,6 @@ const AdminRoutes = () => {
       <Route path="/" element={<Navigate to="users" />}></Route>
       <Route path="users" element={<UsersList />}></Route>
       <Route path="products" element={<ProductsList />}></Route>
-      {/* <Route path="*" element={<InvalidRoute />} /> */}
     </Routes>
   );
 };
