@@ -16,6 +16,8 @@ If you have more basic concepts which can help our fellow react developers or a 
 
 ✅ Live API call using `Axios`
 
+✅ `useContext()` for data sharing throughout the application
+
 ✅ `Axios Interceptor` as `custom hook` for header and base URL **(Avoid using passing of headers in every service file)**
 
 ✅ `Prime React` and `Bootstrap` as our UI library

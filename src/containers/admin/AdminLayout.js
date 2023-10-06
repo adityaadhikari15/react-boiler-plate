@@ -15,7 +15,14 @@ const AdminLayout = () => {
             <img src={reactLogo} width={80} />
           </div>
           <nav>
-            <ul>{loggedInUser?.firstName}</ul>
+            <ul>
+              <div className="center fs-5 fw-medium">
+                Welcome, {loggedInUser?.firstName}
+              </div>
+              <div className="text-center">
+                The above username is fetced using useContext()
+              </div>
+            </ul>
             <ul>
               <NavLink
                 className={({ isActive }) =>
