@@ -16,16 +16,19 @@ const AppRouting = () => {
         <Route path="login" element={<Login />} />
         <Route element={<AuthenticationGuard />}>
           <Route path="admin" element={<RoleRouterGuard role={"ADMIN"} />}>
-            <Suspense>
+            <Route
+              path="*"
+              element={
+                <Suspense fallback={<h1>Loading admin.....</h1>}>
+                  <AdminLayout />
+                </Suspense>
+              }
+            ></Route>
+            {/* <Suspense>
               <Route path="" element={<AdminLayout />}></Route>
-            </Suspense>
-            <Suspense>
-              <Route path="*" element={<AdminLayout />}></Route>
-            </Suspense>
+            </Suspense> */}
           </Route>
           <Route path="*" element={<InvalidRoute />} />
-          {/* <Route path="seller/*" element={<AdminRouterGuard />}></Route>
-        <Route path="admin/*" element={<AdminRouterGuard />}></Route> */}
         </Route>
         <Route path="*" element={<InvalidRoute />} />
       </Routes>

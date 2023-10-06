@@ -1,9 +1,9 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { GetUsers } from "../../../../services/users.service";
+import UserContext from "../../../../utils/contexts/userContext";
 
 const UsersList = () => {
   const [users, setUsers] = useState([]);
-
   useEffect(() => {
     getUsers();
   }, []);
