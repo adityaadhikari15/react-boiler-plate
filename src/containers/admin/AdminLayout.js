@@ -2,8 +2,11 @@ import { NavLink } from "react-router-dom";
 import AdminRoutes from "./AdminRoutes.js";
 import "./admin-layout.scss";
 import reactLogo from "../../assets/images/react.png";
+import { useContext } from "react";
+import UserContext from "../../utils/contexts/userContext.js";
 
 const AdminLayout = () => {
+  const { loggedInUser } = useContext(UserContext);
   return (
     <div className="admin-layout">
       <div className="side-bar">
@@ -12,6 +15,7 @@ const AdminLayout = () => {
             <img src={reactLogo} width={80} />
           </div>
           <nav>
+            <ul>{loggedInUser?.firstName}</ul>
             <ul>
               <NavLink
                 className={({ isActive }) =>

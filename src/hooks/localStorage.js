@@ -24,7 +24,7 @@ const useLocalStorage = () => {
   };
 
   const setUser = (data) => {
-    if (data.user) {
+    if (data) {
       localStorage.setItem(BB_USER_NAME, JSON.stringify(data));
       return true;
     }

@@ -4,6 +4,7 @@ import UserContext from "../../../../utils/contexts/userContext";
 
 const UsersList = () => {
   const [users, setUsers] = useState([]);
+
   useEffect(() => {
     getUsers();
   }, []);
@@ -12,7 +13,6 @@ const UsersList = () => {
     await GetUsers()
       .then((res) => {
         setUsers(res.users);
-        console.log(users);
       })
       .catch(() => {});
   };

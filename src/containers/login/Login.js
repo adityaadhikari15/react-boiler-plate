@@ -1,16 +1,16 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { InputText } from "primereact/inputtext";
 import { UserSignIn } from "../../services";
 import "./login.scss";
 import { useNavigate } from "react-router-dom";
 import { Button } from "primereact/button";
 import reactLogo from "../../assets/images/react.png";
+import UserContext from "../../utils/contexts/userContext";
 
 const Login = () => {
   const [username, setUserName] = useState("kminchelle");
   const [password, setUserPassword] = useState("0lelplR");
   const [loading, setLoading] = useState(false);
-
   const navigate = useNavigate();
 
   const login = async () => {
