@@ -20,7 +20,7 @@ const AdminLayout = () => {
                 Welcome, {loggedInUser?.firstName}
               </div>
               <div className="text-center">
-                The above username is fetced using useContext()
+                The above username is fetched using useContext()
               </div>
             </ul>
             <ul>

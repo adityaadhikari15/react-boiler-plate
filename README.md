@@ -20,6 +20,8 @@ If you have more basic concepts which can help our fellow react developers or a 
 
 ✅ `Axios Interceptor` as `custom hook` for header and base URL **(Avoid using passing of headers in every service file)**
 
+✅ `React-redux` & `React-tookit` for **state management**
+
 ✅ `Prime React` and `Bootstrap` as our UI library
 
 ✅ `Login page`, `Users list` and `Products list` with live API call.
@@ -55,5 +57,7 @@ If you have more basic concepts which can help our fellow react developers or a 
 ➡️ [Bootstrap](https://getbootstrap.com/docs/5.3/getting-started/introduction/)
 
 ➡️ [React Router](https://reactrouter.com/en/main)
+
+➡️ [React-Redux](https://react-redux.js.org/)
 
 ➡️ [Dummy API Calls with authentication and live data](https://dummyjson.com/docs)

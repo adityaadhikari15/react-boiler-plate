@@ -1,10 +1,16 @@
-import { useContext, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { GetUsers } from "../../../../services/users.service";
-import UserContext from "../../../../utils/contexts/userContext";
+import { useDispatch, useSelector } from "react-redux";
+import { Button } from "primereact/button";
+import { addUser } from "../../../../store/slices/userSlice";
 
 const UsersList = () => {
   const [users, setUsers] = useState([]);
 
+  const items = useSelector((store) => store.user.usersList);
+  const dispatch = useDispatch();
+
+  console.log(items);
   useEffect(() => {
     getUsers();
   }, []);
@@ -20,7 +26,19 @@ const UsersList = () => {
   return (
     <div>
       <div className="card">
-        <h3 className="mb-16px text-underline">Users list</h3>
+        <div>
+          <h3 className="mb-16px text-underline">Users list</h3>
+          <div>
+            <Button
+              label="Login"
+              className="btn btn-sm btn-primary w-100"
+              onClick={() => {
+                dispatch(addUser("Aditya Adhikari"));
+              }}
+            />
+          </div>
+        </div>
+
         <table className="table">
           <thead>
             <tr>
