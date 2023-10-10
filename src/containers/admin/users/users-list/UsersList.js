@@ -2,15 +2,15 @@ import { useEffect, useState } from "react";
 import { GetUsers } from "../../../../services/users.service";
 import { useDispatch, useSelector } from "react-redux";
 import { Button } from "primereact/button";
-import { addUser } from "../../../../store/slices/userSlice";
+import { addUser, allUsers } from "../../../../store/slices/userSlice";
+import reactLogo from "../../../../assets/images/react.png";
 
 const UsersList = () => {
-  const [users, setUsers] = useState([]);
+  //   const [users, setUsers] = useState([]);
 
-  const items = useSelector((store) => store.user.usersList);
+  const users = useSelector((store) => store.user.usersList);
   const dispatch = useDispatch();
 
-  console.log(items);
   useEffect(() => {
     getUsers();
   }, []);
@@ -18,7 +18,8 @@ const UsersList = () => {
   const getUsers = async () => {
     await GetUsers()
       .then((res) => {
-        setUsers(res.users);
+        dispatch(allUsers(res.users));
+        // setUsers(res.users);
       })
       .catch(() => {});
   };
@@ -26,14 +27,23 @@ const UsersList = () => {
   return (
     <div>
       <div className="card">
-        <div>
+        <div className="d-flex justify-content-between">
           <h3 className="mb-16px text-underline">Users list</h3>
           <div>
             <Button
-              label="Login"
-              className="btn btn-sm btn-primary w-100"
+              label="Add User using redux"
+              className="btn btn-sm btn-primary w-100 mt-0"
               onClick={() => {
-                dispatch(addUser("Aditya Adhikari"));
+                dispatch(
+                  addUser({
+                    id: Math.random(),
+                    firstName: "Redux User",
+                    email: "testredux@react.com",
+                    phone: "0987654321",
+                    university: "React India",
+                    img: { reactLogo },
+                  })
+                );
               }}
             />
           </div>
@@ -49,24 +59,25 @@ const UsersList = () => {
             </tr>
           </thead>
           <tbody>
-            {users.map((elem) => {
-              return (
-                <tr key={elem.id}>
-                  <td>
-                    <img src={elem.image} style={{ width: "40px" }}></img>
-                  </td>
-                  <td scope="row">
-                    {elem.firstName} {elem.lastName}
-                  </td>
+            {users.length &&
+              users.map((elem) => {
+                return (
+                  <tr key={elem.id}>
+                    <td>
+                      <img src={elem.image} style={{ width: "40px" }}></img>
+                    </td>
+                    <td scope="row">
+                      {elem.firstName} {elem.lastName}
+                    </td>
 
-                  <td>
-                    <div>{elem.email}</div>
-                    <div className="text-muted"> {elem.phone}</div>
-                  </td>
-                  <td>{elem.university}</td>
-                </tr>
-              );
-            })}
+                    <td>
+                      <div>{elem.email}</div>
+                      <div className="text-muted"> {elem.phone}</div>
+                    </td>
+                    <td>{elem.university}</td>
+                  </tr>
+                );
+              })}
           </tbody>
         </table>
       </div>

@@ -7,13 +7,16 @@ const userSlice = createSlice({
   },
   reducers: {
     addUser: (state, action) => {
-      state.usersList.push(action.payload);
+      state.usersList = [action.payload, ...state.usersList];
     },
     getUsers: (state, action) => {
       return state.usersList;
     },
+    allUsers: (state, action) => {
+      state.usersList = action.payload;
+    },
   },
 });
 
-export const { addUser, getUsers } = userSlice.actions;
+export const { addUser, getUsers, allUsers } = userSlice.actions;
 export default userSlice.reducer;
