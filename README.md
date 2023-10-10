@@ -41,6 +41,8 @@ If you have more basic concepts which can help our fellow react developers or a 
 "react": "^18.2.0",
 "react-dom": "^18.2.0",
 "react-router-dom": "^6.16.0",
+"react-redux": "^8.1.3",
+ "@reduxjs/toolkit": "^1.9.7",
 "parcel": "^2.9.3",
 ```
 
