@@ -38,9 +38,17 @@ If you have more basic concepts which can help our fellow react developers or a 
 
 **-** Install `jest` for testing
 
-**-** Install `babel` dependencies.[Read how to install](https://jestjs.io/docs/getting-started)
+**-** Install `babel` dependencies. [Read how to install](https://jestjs.io/docs/getting-started)
 
 **-** Configure `babel.config`. [Read how to install](https://jestjs.io/docs/getting-started#using-babel)
+
+### Configure your parcel for testing purpose
+
+**(Disclaimer)** Adding `babel.config` for testing then this file will conflict with parcel `babel configuration`. [Read more](https://parceljs.org/languages/javascript/#babel).
+
+**-** Follow steps from [this link](https://parceljs.org/languages/javascript/#usage-with-other-tools).
+
+**\_** Configure you `.parcelrc`. Read more[https://parceljs.org/languages/javascript/#usage-with-other-tools]
 
 ### Dependencies Used in this project
 
