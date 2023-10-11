@@ -44,13 +44,37 @@ If you have more basic concepts which can help our fellow react developers or a 
 
 ### Configure your parcel for testing purpose
 
-**(Important) Parcel has its own babel. Parcel babel configuration will conflict with testing `babel.config`. [Read more](https://parceljs.org/languages/javascript/#babel).**
+**(Important) Parcel has its own default babel transpiler. Parcel babel configuration will conflict with testing `babel.config`. [Read more](https://parceljs.org/languages/javascript/#babel).**
 
 #### How to solve the conflict
 
 **-** Follow steps from [this link](https://parceljs.org/languages/javascript/#usage-with-other-tools) of parcel.
 
-**-** Configure you `.parcelrc`. Read more[https://parceljs.org/languages/javascript/#usage-with-other-tools]
+**-** Configure you `.parcelrc` to disable parcel default `babel` transpiler. [Read more](https://parceljs.org/languages/javascript/#usage-with-other-tools)
+
+#### Test your parcel and jest configuration for conflicts
+
+**-** Run `npm run test`
+
+#### Setup jest testing file
+
+**-** Run `npx jest init`
+
+**Follow the below options**
+
+**✔** Would you like to use Typescript for the configuration file? … `no`
+
+**✔** Choose the test environment that will be used for testing › `jsdom (browser-like)`
+
+**✔** Do you want Jest to add coverage reports? … `yes`
+
+**✔** Which provider should be used to instrument code for coverage? › `babel`
+
+**✔** Automatically clear mock calls, instances, contexts and results before every test? … `yes`
+
+**-** After selecting options asked by jest it will create a `jest.config.js`
+
+**(Important)** If your are using `jest package` about version `28`, then run `npm install --save-dev jest-environment-jsdom`. [Read more](https://testing-library.com/docs/react-testing-library/setup#jest-28)
 
 ### Dependencies Used in this project
 
