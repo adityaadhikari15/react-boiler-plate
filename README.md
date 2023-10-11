@@ -44,11 +44,13 @@ If you have more basic concepts which can help our fellow react developers or a 
 
 ### Configure your parcel for testing purpose
 
-**(Disclaimer)** Adding `babel.config` for testing then this file will conflict with parcel `babel configuration`. [Read more](https://parceljs.org/languages/javascript/#babel).
+**(Important) Parcel has its own babel. Parcel babel configuration will conflict with testing `babel.config`. [Read more](https://parceljs.org/languages/javascript/#babel).**
 
-**-** Follow steps from [this link](https://parceljs.org/languages/javascript/#usage-with-other-tools).
+#### How to solve the conflict
 
-**\_** Configure you `.parcelrc`. Read more[https://parceljs.org/languages/javascript/#usage-with-other-tools]
+**-** Follow steps from [this link](https://parceljs.org/languages/javascript/#usage-with-other-tools) of parcel.
+
+**-** Configure you `.parcelrc`. Read more[https://parceljs.org/languages/javascript/#usage-with-other-tools]
 
 ### Dependencies Used in this project
 
