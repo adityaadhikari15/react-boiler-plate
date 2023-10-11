@@ -32,6 +32,16 @@ If you have more basic concepts which can help our fellow react developers or a 
 
 **-** Build you application using `npm build`
 
+### Testing configurations
+
+**-** Install `@testing-library/react`
+
+**-** Install `jest` for testing
+
+**-** Install `babel` dependencies.[Read how to install](https://jestjs.io/docs/getting-started)
+
+**-** Configure `babel.config`. [Read how to install](https://jestjs.io/docs/getting-started#using-babel)
+
 ### Dependencies Used in this project
 
 ```
